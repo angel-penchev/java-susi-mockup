@@ -1,0 +1,11 @@
+package dev.penchev.susi;
+
+class Student extends User {
+  String facultyNumber;
+  Faculty faculty;
+
+  public Student(String name, String email, String password, String socialSecurityNumber, String address,
+      String studentNumber) {
+    super(name, email, password, socialSecurityNumber, address);
+  }
+}
