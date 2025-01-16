@@ -1,8 +1,9 @@
 plugins {
     id("java")
+    id("application")
 }
 
-group = "dev.penchev"
+group = "dev.penchev.automobile"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -16,4 +17,8 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+application {
+  mainClass = "dev.penchev.automobile.Main"
 }
