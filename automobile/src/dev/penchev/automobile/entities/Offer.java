@@ -6,7 +6,7 @@ import dev.penchev.automobile.entities.vehicle.Vehicle;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-class Offer {
+public class Offer {
   protected UUID id;
   protected String title;
   protected String descritpion;
