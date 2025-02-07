@@ -2,8 +2,9 @@ package dev.penchev.automobile.views;
 
 import java.util.Scanner;
 
-public class InitialView implements View {
+public class InitialView extends View {
     public static void render() {
+        clearConsole();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -23,11 +24,11 @@ public class InitialView implements View {
                 switch (choice) {
                     case 1:
                         System.out.println("You chose to Sign Up.");
-                        // Implement sign-up logic
+                        RegistrationView.render();
                         break;
                     case 2:
                         System.out.println("You chose to Sign In.");
-                        // Implement sign-in logic
+                        LoginView.render();
                         break;
                     case 3:
                         System.out.println("You chose to Continue as Guest.");
