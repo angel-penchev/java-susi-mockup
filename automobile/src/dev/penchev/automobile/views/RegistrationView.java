@@ -9,15 +9,16 @@ public class RegistrationView extends View {
         clearConsole();
         System.out.println("--- Registration ---");
 
-        String email = getValidatedInput("Email:", "Please enter a valid email address."); // Add validation later
-        String phoneNumber = getValidatedInput("Phone Number:", "Please enter a valid phone number."); // Add validation later
-        String password = getValidatedInput("Password:", "Password must be at least 8 characters."); // Add validation later
+        String email = getValidatedInput("Email:", "Please enter a valid email address.");
+        String phoneNumber = getValidatedInput("Phone Number:", "Please enter a valid phone number.");
+        String password = getValidatedInput("Password:", "Password must be at least 8 characters.");
         String firstName = getValidatedInput("First Name:", "First name cannot be empty.");
         String lastName = getValidatedInput("Last Name:", "Last name cannot be empty.");
 
         RegisteredUser newUser = new RegisteredUser(email, phoneNumber, password, firstName, lastName);
         System.out.println("User registered successfully!");
-        // TODO
+
+        userService.register(newUser);
     }
 
 
