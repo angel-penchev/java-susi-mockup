@@ -25,4 +25,28 @@ public class RegisteredUser extends User {
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public List<Offer> getListedOffers() {
+        return listedOffers;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public boolean validatePassword(String providedPassword) {
+        return providedPassword.equals(this.passwordHash);
+    }
 }
